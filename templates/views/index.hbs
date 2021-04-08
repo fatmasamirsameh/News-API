@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+           <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    </head>
+    <body> 
+        {{>header}}
+    
+<div class="container">
+  <div class="row">
+
+      {{#each articles}}
+         <div class="col-3  mt-2 justify-content-between">
+        <div class="card" style="width: 18rem;">
+  <img src="{{this.urlToImage}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{this.title}}</h5>
+    <p class="card-text">{{this.description}}</p>
+ 
+  </div>
+   </div>
+    </div>
+   {{/each}}
+  
+   </div>
+</div>
+   {{>footer}}
+        <script src='js/app.js'></script>
+        <script src='js/bootstrap.min.js'></script>
+    </body>
+</html>
